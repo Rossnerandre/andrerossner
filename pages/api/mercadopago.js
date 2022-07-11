@@ -1,0 +1,2 @@
+import mercadopago from 'mercadopago';
+
