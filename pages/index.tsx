@@ -12,8 +12,6 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
         <meta name="adopt-website-id" content="d4d6c6ad-202a-4d99-b073-a359d5cd7671"/>
         {/* eslint-disable-next-line @next/next/no-sync-scripts */}
-        <script src="//tag.goadopt.io/injector.js?website_code=d4d6c6ad-202a-4d99-b073-a359d5cd7671"
-                className="adopt-injector"></script>
       </Head>
 
       <main className={styles.main}>
