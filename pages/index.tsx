@@ -14,11 +14,6 @@ const Home: NextPage = () => {
         {/* eslint-disable-next-line @next/next/no-sync-scripts */}
       </Head>
 
-      <noscript dangerouslySetInnerHTML={{
-        __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TTM6JWC"
-height="0" width="0" style="display:none;visibility:hidden"></iframe>`
-      }}></noscript>
-
       <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
