@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Link from "next/link";
+import React from "react";
 
 const Home: NextPage = () => {
   return (
@@ -16,6 +17,10 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
+        <noscript dangerouslySetInnerHTML={{
+          __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TTM6JWC"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>`
+        }}></noscript>
         <h1 className={styles.title}>
           pagina sobre
           <Link href="/sobre">Sobre</Link>

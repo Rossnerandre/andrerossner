@@ -1,9 +1,14 @@
 import Link from "next/link";
+import React from "react";
 
 
 export default function Sobre() {
   return (
     <div>
+      {/*<noscript dangerouslySetInnerHTML={{*/}
+      {/*  __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TTM6JWC"*/}
+      {/*      height="0" width="0" style="display:none;visibility:hidden"></iframe>`*/}
+      {/*}}></noscript>*/}
       <h1>Sobre</h1>
       <Link href="/">Pagina inicial</Link>
       <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At commodi, corporis culpa debitis dolorem
