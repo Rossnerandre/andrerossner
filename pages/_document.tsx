@@ -1,7 +1,5 @@
 import React, { ReactElement } from "react";
-// import Document, {Html, Head, Main, NextScript, DocumentInitialProps, DocumentContext} from 'next/document';
 import Document, { Html, Head, Main, NextScript, DocumentInitialProps, DocumentContext } from 'next/document';
-import Script from 'next/script'
 
 export default class MyDocument extends Document {
 
@@ -17,7 +15,11 @@ export default class MyDocument extends Document {
     return (
       <Html lang="pt-BR">
         <Head>
-
+          <meta charSet="utf-8"/>
+          <meta name="viewport" content="width=device-width, initial-scale=1"/>
+          <meta name="theme-color" content="#000000"/>
+          <meta name="description" content="André Rossner"/>
+          <title>André Rossner</title>
         </Head>
         <body>
 
