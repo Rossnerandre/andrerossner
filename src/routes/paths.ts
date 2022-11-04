@@ -5,7 +5,7 @@ export const PATH_PAGE = {
   page404: '/404',
   page500: '/500',
   home: '/',
-  about: '/about',
+  about: '#about',
   projects: '/projects',
   contact: '/contact',
   // politicaDePrivacidade: '/politica-de-privacidade',
