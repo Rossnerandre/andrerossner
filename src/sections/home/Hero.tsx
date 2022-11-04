@@ -49,13 +49,13 @@ const particlesOptions = {
         default: "bounce",
       },
       random: false,
-      speed: 1,
+      speed: 0.2,
       straight: false,
     },
     number: {
       density: {
         enable: true,
-        area: 500,
+        area: 900,
       },
       value: 99,
     },
