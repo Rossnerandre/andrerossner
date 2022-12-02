@@ -99,7 +99,7 @@ function MenuMobileItem({ item }: MenuMobileItemProps) {
   const isActive = pathname === path;
 
   return (
-    <NextLink href={path} passHref>
+    <NextLink href={path} passHref legacyBehavior>
       <ListItemStyle
         sx={{
           ...(isActive && {

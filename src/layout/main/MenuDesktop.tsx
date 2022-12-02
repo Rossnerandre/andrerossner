@@ -1,5 +1,5 @@
 // next
-// import NextLink from 'next/link';
+import NextLink from 'next/link';
 import {useRouter} from 'next/router';
 // @mui
 import {styled} from '@mui/material/styles';
@@ -65,17 +65,18 @@ function MenuDesktopItem({
   const isActive = (path: string) => pathname === path;
 
   return (
-    <LinkStyle
-      href={path}
-      sx={{
-        ...(isHome && {color: 'common.white'}),
-        ...(isOffset && {color: 'text.primary'}),
-        ...(isActive(path) && {
-          color: 'secondary.main',
-        }),
-      }}
-    >
-      {title}
-    </LinkStyle>
+    <NextLink href={path} passHref legacyBehavior>
+      <LinkStyle
+        sx={{
+          ...(isHome && {color: 'common.white'}),
+          ...(isOffset && {color: 'text.primary'}),
+          ...(isActive(path) && {
+            color: 'secondary.main',
+          }),
+        }}
+      >
+        {title}
+      </LinkStyle>
+    </NextLink>
   );
 }
