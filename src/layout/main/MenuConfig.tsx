@@ -17,17 +17,17 @@ const menuConfig = [
     path: '/',
   },
   {
-    title: 'About',
+    title: 'Sobre',
     icon: <Iconify icon={'simple-icons:aboutdotme'} {...ICON_SIZE} />,
     path: PATH_PAGE.about,
   },
   {
-    title: 'Projects',
+    title: 'Projetos',
     icon: <Iconify icon={'entypo:lab-flask'} {...ICON_SIZE} />,
     path: PATH_PAGE.projects,
   },
   {
-    title: 'Contact',
+    title: 'Contato',
     path: PATH_PAGE.contact,
     icon: <Iconify icon={'mdi:phone'} {...ICON_SIZE} />,
   },
