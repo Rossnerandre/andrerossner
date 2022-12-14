@@ -1,6 +1,7 @@
 import {ReactNode} from "react";
 import MainHeader from "./MainHeader";
 import {Box, Stack} from "@mui/material";
+import MainFooter from "./MainFooter";
 
 
 type Porps = {
@@ -13,6 +14,7 @@ export default function MainLayout({children}: Porps) {
       <MainHeader />
       {children}
       <Box sx={{ flexGrow: 1 }} />
+      <MainFooter />
     </Stack>
   );
 }
