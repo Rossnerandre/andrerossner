@@ -6,8 +6,8 @@ export const PATH_PAGE = {
   page500: '/500',
   home: '/',
   about: '#about',
-  projects: '/projects',
-  contact: '/contact',
+  projects: '#projects',
+  contact: '#contact',
   // politicaDePrivacidade: '/politica-de-privacidade',
   // politicaDeCookies: '/politica-de-cookies',
 };
