@@ -1,6 +1,6 @@
 import React from "react";
 import {styled} from "@mui/system";
-import {HomeHero, About, Projects} from "../sections/home";
+import {HomeHero, About, Projects, Contact} from "../sections/home";
 import Layout from "../layout";
 import Page from "../components/Page";
 
@@ -25,6 +25,7 @@ function Home() {
       <ContentStyle>
         <About/>
         <Projects/>
+        <Contact/>
       </ContentStyle>
     </Page>
   )
