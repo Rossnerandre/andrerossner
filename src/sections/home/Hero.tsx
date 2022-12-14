@@ -1,4 +1,4 @@
-import React, {useCallback} from "react";
+import React, {useCallback, useEffect, useState} from "react";
 import type {Container, Engine} from "tsparticles-engine";
 import Particles from "react-tsparticles";
 import {loadFull} from "tsparticles";
@@ -76,11 +76,9 @@ const particlesOptions = {
 }
 
 const HeroHome = () => {
+  const [load, isLoaded] = useState(false);
 
   const particlesInit = useCallback(async (engine: Engine) => {
-    // you can initialize the tsParticles instance (engine) here, adding custom shapes or presets
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
     await loadFull(engine);
   }, []);
 
@@ -88,25 +86,22 @@ const HeroHome = () => {
     await console.log(container);
   }, []);
 
+  useEffect(() => {
+    isLoaded(true);
+  }, [])
+
 
   return (
     <Box
-      // sx={{position: 'relative'}}
       sx={{
         overflow: 'hidden !important',
         height: '100vh !important',
         width: '100% !important',
-
       }}
     >
       <Particles
         id="tsparticles"
         init={particlesInit}
-        width={'100vw'}
-        height={'100vh'}
-        style={{
-          height: "50vw !important",
-        }}
         loaded={particlesLoaded}
         //@ts-ignore
         options={particlesOptions}
@@ -121,9 +116,11 @@ const HeroHome = () => {
       }}>
       </Box>
 
-      <Box sx={{position: 'relative'}}>
-        <PlanetStyled />
-      </Box>
+      {load &&
+          <Box sx={{position: 'relative'}}>
+              <PlanetStyled/>
+          </Box>
+      }
     </Box>
   )
 }
