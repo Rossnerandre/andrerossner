@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Document, {Html, Head, Main, NextScript} from 'next/document';
+import palette from '../theme/palette';
 import createEmotionServer from '@emotion/server/create-instance';
 import createEmotionCache from '../theme/createEmotionCache';
 
@@ -8,16 +9,18 @@ export default class MyDocument extends Document {
     return (
       <Html lang="pt-BR">
         <Head>
-          {/* PWA primary color */}
-          <link rel="shortcut icon" href="/favicon.ico"/>
+          <meta charSet="utf-8"/>
+          <link rel="shortcut icon" href="/favicon/favicon.ico"/>
 
-          {/*<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"/>*/}
+          <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png"/>
 
-          {/*<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"/>*/}
+          <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png"/>
 
-          {/*<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"/>*/}
+          <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png"/>
 
-          {/*<link rel="manifest" href="/manifest.json"/>*/}
+          <meta name="theme-color" content={palette.light.secondary.main}/>
+
+          <link rel="manifest" href="/manifest.json"/>
           {/*<link*/}
           {/*  rel="stylesheet"*/}
           {/*  href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap"*/}

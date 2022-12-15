@@ -44,7 +44,6 @@ function MyApp(props: MyAppProps) {
       <Head>
         <title>André Rossner</title>
         <meta name="viewport" content="initial-scale=1, width=device-width"/>
-        <link rel="icon" href="/public/favicon.ico"/>
       </Head>
       {analytics}
       <noscript dangerouslySetInnerHTML={{
