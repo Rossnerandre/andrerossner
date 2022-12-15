@@ -1,8 +1,10 @@
+import {motion} from 'framer-motion';
 import React, {useCallback, useEffect, useState} from "react";
 import type {Container, Engine} from "tsparticles-engine";
 import Particles from "react-tsparticles";
 import {loadFull} from "tsparticles";
-import {Box, styled} from "@mui/material";
+import {Box, styled, Stack, StackProps, Typography, Container as ContainerMui} from "@mui/material";
+import {MotionContainer, varFade} from '../../components/animate';
 
 
 const particlesOptions = {
@@ -75,8 +77,27 @@ const particlesOptions = {
   detectRetina: true,
 }
 
+
+const ContentStyle = styled((props: StackProps) => <Stack spacing={5} {...props} />)(
+  ({theme}) => ({
+    zIndex: 10,
+    maxWidth: 520,
+    margin: 'auto',
+    textAlign: 'center',
+    position: 'relative',
+    paddingTop: theme.spacing(40),
+    paddingBottom: theme.spacing(15),
+    [theme.breakpoints.up('md')]: {
+      margin: 'unset',
+      textAlign: 'left',
+    },
+  })
+);
 const HeroHome = () => {
   const [load, isLoaded] = useState(false);
+  const [loadBob, isLoadedBob] = useState(true);
+  const [loadName, isLoadedName] = useState(false);
+  const [loadOps, isLoadedOps] = useState(false);
 
   const particlesInit = useCallback(async (engine: Engine) => {
     await loadFull(engine);
@@ -90,6 +111,19 @@ const HeroHome = () => {
     isLoaded(true);
   }, [])
 
+  useEffect(() => {
+    setTimeout(() => {
+      isLoadedBob(false);
+      isLoadedOps(true);
+    }, 3000)
+  }, [])
+
+  useEffect(() => {
+    setTimeout(() => {
+      isLoadedOps(false)
+      isLoadedName(true);
+    }, 5000)
+  }, [])
 
   return (
     <Box
@@ -113,7 +147,37 @@ const HeroHome = () => {
         position: 'absolute',
         top: 0,
         zIndex: -1,
-      }}>
+      }} component={MotionContainer}>
+        <ContainerMui>
+          <ContentStyle>
+            <motion.div variants={varFade().inDown}>
+              <Typography variant="h1" sx={{color: 'common.white'}}>
+                Bem vindo <br/>
+                ao incrível <br/>
+                mundo de <br/>
+                {loadBob && <Typography component={'span'} variant="h1" sx={{color: 'secondary.main'}}>
+                    Bob
+                </Typography>}
+              </Typography>
+            </motion.div>
+            {loadOps && (
+              <motion.div variants={varFade().inRight}>
+                <Typography component={'span'} variant="h1" sx={{color: 'secondary.main'}}>
+                  Ops....
+                </Typography>
+              </motion.div>
+            )}
+            {loadName && (
+              <motion.div variants={varFade().inRight}>
+                <Typography component={'span'} variant="h1" sx={{color: 'secondary.main'}}>
+                  André Rossner
+                </Typography>
+              </motion.div>
+            )}
+
+
+          </ContentStyle>
+        </ContainerMui>
       </Box>
 
       {load &&
