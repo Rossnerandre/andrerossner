@@ -19,7 +19,7 @@ function Home() {
   return (
     <Page
       title={'André Rossner'}
-      meta={<meta name="description" content="My Web Site"/>}
+      meta={<meta name="description" content="André Rossner Front End"/>}
     >
       <HomeHero/>
       <ContentStyle>
