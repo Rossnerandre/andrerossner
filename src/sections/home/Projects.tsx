@@ -43,7 +43,6 @@ const RootBox = styled(Box)(() => ({
 // ----------------------------------------------------------------------
 
 export default function Projects() {
-  console.log(typeof projects)
   return (
     <RootBox id={'projects'}>
       <Container>
