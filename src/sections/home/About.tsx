@@ -60,7 +60,7 @@ export default function About() {
             <Typography variant={'h5'} color={'secondary'} textAlign={'center'}>Desenvolvedor Front-End</Typography>
             <br/>
             <Typography variant={'body1'}>
-              Graduarao em Análise e desenvolvimento de sistemas, apaixonado por tecnologia, programação e inovação.
+              Graduado em Análise e desenvolvimento de sistemas, apaixonado por tecnologia, programação e inovação.
               Atualmente trabalho com desenvolvimento de software, focado em desenvolvimento web. Tenho experiência
               com desenvolvimento de aplicações web, utilizando tecnologias e ferramentas como React, TypeScript,
               JavaScript, HTML, CSS, PHP, MySQL, Firebase, UX/UI, Figma.
